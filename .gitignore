@@ -1,0 +1,12 @@
+.env
+venv
+.venv
+*.csv
+*.sql
+*.xlsx
+*.db
+*.yml
+*config
+config.yml
+.sql
+vendas.sql
