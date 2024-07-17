@@ -20,5 +20,5 @@ def load_data_and_send_email(df, subject, to_email, email, password, text=None):
     email_sender.quit()
 
 def load_vendas_data(df_vendas, to_email, email, password, text):
-    subject = "Relatório de Vendas"
+    subject = "Seu Resumo Periódico da CSTecnologia (JENIUS-COMPRESS)"
     load_data_and_send_email(df_vendas, subject, to_email, email, password, text)
