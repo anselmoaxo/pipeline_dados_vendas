@@ -33,3 +33,4 @@ def calculando_qtd_nfe_30dias_anterior(data_inicial, df_vendas):
     filtro_30_dias = df_vendas['ped01_emissao'].between(data_30_dias_atras, data_inicial)
     qtd_nfe = df_vendas[filtro_30_dias]['valor_total'].count()
     return qtd_nfe
+

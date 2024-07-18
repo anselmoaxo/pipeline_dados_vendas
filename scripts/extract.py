@@ -23,4 +23,8 @@ def extract_sql_faturamento():
     return extract_sql('faturamento_anual.sql')
 
 
+def extract_sql_produto():
+    return extract_sql('vendas_produto.sql')
+
+
 
