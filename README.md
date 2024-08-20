@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     A[Extração de Dados] --> B[Orquestração com Airflow]
     B --> C[Transformação com dbt]
@@ -23,4 +24,3 @@ graph TD
     B --> B1
     C --> C1
     D --> D1
-
