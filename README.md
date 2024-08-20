@@ -1,19 +1,26 @@
-```mermaid
 graph TD
-    A[Extrair Dados] --> B[Transformar Dados]
-    B --> C[Cargar Dados]
-    A1[Fonte de Dados 1] --> A
-    A2[Fonte de Dados 2] --> A
-    B1[Limpando Dados] --> B
-    B2[Enriquecendo Dados] --> B
-    C1[Data Warehouse] --> C
-    C2[Data Lake] --> C
-    C3[Banco de Dados de Destino] --> C
-    A1 -->|Extração| A
-    A2 -->|Extração| A
-    B1 -->|Transformação| B
-    B2 -->|Transformação| B
-    C1 -->|Carga| C
-    C2 -->|Carga| C
-    C3 -->|Carga| C
+    A[Extração de Dados] --> B[Orquestração com Airflow]
+    B --> C[Transformação com dbt]
+    C --> D[Criar Dashboard com Power BI]
+    
+    subgraph Fonte
+        A1[Base de Dados PostgreSQL "Novadrive"]
+    end
+
+    subgraph Orquestração
+        B1[Data Warehouse PostgreSQL]
+    end
+
+    subgraph Transformação
+        C1[Transformação de Dados]
+    end
+
+    subgraph Visualização
+        D1[Dashboard no Power BI]
+    end
+
+    A --> A1
+    B --> B1
+    C --> C1
+    D --> D1
 
