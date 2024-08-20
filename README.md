@@ -1,4 +1,5 @@
 ```mermaid
+
 graph TD
     A[Extração de Dados] --> B[Orquestração com Airflow]
     B --> C[Transformação com dbt]
